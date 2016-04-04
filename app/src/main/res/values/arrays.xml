@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="array_luntik">
+        <item>@drawable/luntik_1</item>
+        <item>@drawable/luntik_2</item>
+        <item>@drawable/luntik_3</item>
+        <item>@drawable/luntik_4</item>
+        <item>@drawable/luntik_5</item>
+    </array>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Our Cartoons</string>
+    <string name="image_description">image</string>
+    <string name="cartoon_luntik">Luntik</string>
+    <string name="cartoon_smeshariki">Smeshariki</string>
+    <string name="cartoon_fixiki">Fixiki</string>
+</resources>
