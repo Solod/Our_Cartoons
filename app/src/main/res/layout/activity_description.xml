@@ -47,20 +47,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_image_switcher"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:autoLink="web" />
+
+    <TextView
+        android:id="@+id/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/link"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:text="Description"
+        android:textSize="14sp" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/link">
+        android:layout_below="@id/label_text">
 
         <TextView
             android:id="@+id/tv_description_text"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_below="@id/link"
-            android:text="@string/description_fixiki" />
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/description_fixiki"
+            android:textSize="14sp" />
     </ScrollView>
 
 </android.support.percent.PercentRelativeLayout>
