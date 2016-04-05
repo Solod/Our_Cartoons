@@ -42,11 +42,12 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_image_switcher"
         android:layout_marginTop="8dp"
-        android:text="sssssssssssss" />
+        android:autoLink="web" />
 
     <TextView
         android:layout_width="match_parent"

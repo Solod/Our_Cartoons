@@ -10,12 +10,14 @@ public class Cartoon {
     private int mMiniIMG;
     private String mTitle;
     private List<Integer> mScrins;
+    private String mLink;
 
-    public Cartoon(Cartoons cartoon, String title, int resoursImg, List<Integer> resourseList) {
+    public Cartoon(Cartoons cartoon, String title, int resoursImg, List<Integer> resourseList, String url) {
         mCartoons = cartoon;
         mTitle = title;
         mMiniIMG = resoursImg;
         mScrins = resourseList;
+        mLink = url;
     }
 
     public Cartoons getCartoons() {
@@ -50,4 +52,11 @@ public class Cartoon {
         this.mScrins = mScrins;
     }
 
+    public String getLink() {
+        return mLink;
+    }
+
+    public void setLink(String mLink) {
+        this.mLink = mLink;
+    }
 }

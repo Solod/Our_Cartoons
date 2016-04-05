@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
     private ImageSwitcher mImageSwitcher;
     private ImageButton mImageButtonRight;
     private ImageButton mImageButtonLeft;
+    private TextView mTextViewUrl;
+
     private int mSelectPositionImg = 0;
     private Cartoon mCartoon;
 
@@ -26,8 +29,26 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
         setContentView(R.layout.activity_description);
         Intent intent = getIntent();
         mCartoon = getCartoons(intent);
+        findViews();
         initView();
         initListener();
+    }
+
+    private void findViews() {
+        mImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher);
+        mImageButtonLeft = (ImageButton) findViewById(R.id.btn_switch_left);
+        mImageButtonRight = (ImageButton) findViewById(R.id.btn_switch_right);
+        mTextViewUrl = (TextView) findViewById(R.id.link);
+
+    }
+
+    private void initView() {
+        if (mImageSwitcher != null) {
+            mImageSwitcher.setFactory(this);
+            mImageSwitcher.setImageResource(mCartoon.getScrins().get(mSelectPositionImg));
+        }
+        mTextViewUrl.setText(mCartoon.getLink());
+
     }
 
     private void initListener() {
@@ -50,15 +71,6 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
         return allCartoon.get(0);
     }
 
-    private void initView() {
-        mImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher);
-        if (mImageSwitcher != null) {
-            mImageSwitcher.setFactory(this);
-            mImageSwitcher.setImageResource(mCartoon.getScrins().get(mSelectPositionImg));
-        }
-        mImageButtonLeft = (ImageButton) findViewById(R.id.btn_switch_left);
-        mImageButtonRight = (ImageButton) findViewById(R.id.btn_switch_right);
-    }
 
     @Override
     public View makeView() {

@@ -4,4 +4,8 @@
     <string name="cartoon_luntik">Luntik</string>
     <string name="cartoon_smeshariki">Smeshariki</string>
     <string name="cartoon_fixiki">Fixiki</string>
+    <string name="url_luntik">http://luntik.ru/</string>
+    <string name="url_fixiki">http://www.fixiki.ru/</string>
+    <string name="url_smeshariki">http://www.smeshariki.ru/</string>
+
 </resources>

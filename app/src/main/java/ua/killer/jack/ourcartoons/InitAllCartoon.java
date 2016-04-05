@@ -31,22 +31,25 @@ public class InitAllCartoon {
                         Cartoons.LUNTIK,
                         context.getResources().getString(R.string.cartoon_luntik),
                         R.drawable.img_mini_luntik,
-                        getPicturesLuntik()
+                        getPicturesLuntik(),
+                        context.getResources().getString(R.string.url_luntik)
                 )
         );
         mList.add(new Cartoon(
                         Cartoons.SMESHARIKI,
                         context.getResources().getString(R.string.cartoon_smeshariki),
                         R.drawable.img_mini_smeshariki,
-                        new LinkedList<Integer>() {
-                        })
+                        getPicturesSmeshariki(),
+                        context.getResources().getString(R.string.url_smeshariki)
+                )
         );
         mList.add(new Cartoon(
                         Cartoons.FIXIKI,
                         context.getResources().getString(R.string.cartoon_fixiki),
                         R.drawable.img_mini_fixiki,
-                        new LinkedList<Integer>() {
-                        })
+                        getPicturesFixiki(),
+                        context.getResources().getString(R.string.url_fixiki)
+                )
         );
     }
 
@@ -57,6 +60,26 @@ public class InitAllCartoon {
         list.add(R.drawable.luntik_3);
         list.add(R.drawable.luntik_4);
         list.add(R.drawable.luntik_5);
+        return list;
+    }
+
+    private List<Integer> getPicturesSmeshariki() {
+        List<Integer> list = new LinkedList<>();
+        list.add(R.drawable.smeshariki_1);
+        list.add(R.drawable.smeshariki_2);
+        list.add(R.drawable.smeshariki_3);
+        list.add(R.drawable.smeshariki_4);
+        list.add(R.drawable.smeshariki_5);
+        return list;
+    }
+
+    private List<Integer> getPicturesFixiki() {
+        List<Integer> list = new LinkedList<>();
+        list.add(R.drawable.fixiki_1);
+        list.add(R.drawable.fixiki_2);
+        list.add(R.drawable.fixiki_3);
+        list.add(R.drawable.fixiki_4);
+        list.add(R.drawable.fixiki_5);
         return list;
     }
 
