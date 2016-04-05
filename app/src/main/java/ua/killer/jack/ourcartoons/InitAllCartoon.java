@@ -9,27 +9,58 @@ import java.util.List;
  * Created by jack on 04.04.16.
  */
 public class InitAllCartoon {
+    private static InitAllCartoon mInitAllCartoon = null;
+    Context mContext;
+    private List<Cartoon> mList;
 
-    public static List<Cartoon> fabric(Context context) {
-        List<Cartoon> list = new LinkedList<>();
-        list.add(new Cartoon(
+    private InitAllCartoon(Context context) {
+        mContext = context;
+        fabric(context);
+    }
+
+    public static InitAllCartoon newInstance(Context context) {
+        if (mInitAllCartoon == null) {
+            mInitAllCartoon = new InitAllCartoon(context);
+        }
+        return mInitAllCartoon;
+    }
+
+    private void fabric(Context context) {
+        mList = new LinkedList<>();
+        mList.add(new Cartoon(
                         Cartoons.LUNTIK,
                         context.getResources().getString(R.string.cartoon_luntik),
-                        R.drawable.img_mini_luntik
+                        R.drawable.img_mini_luntik,
+                        getPicturesLuntik()
                 )
         );
-        list.add(new Cartoon(
+        mList.add(new Cartoon(
                         Cartoons.SMESHARIKI,
                         context.getResources().getString(R.string.cartoon_smeshariki),
-                        R.drawable.img_mini_smeshariki
-                )
+                        R.drawable.img_mini_smeshariki,
+                        new LinkedList<Integer>() {
+                        })
         );
-        list.add(new Cartoon(
+        mList.add(new Cartoon(
                         Cartoons.FIXIKI,
                         context.getResources().getString(R.string.cartoon_fixiki),
-                        R.drawable.img_mini_fixiki
-                )
+                        R.drawable.img_mini_fixiki,
+                        new LinkedList<Integer>() {
+                        })
         );
+    }
+
+    private List<Integer> getPicturesLuntik() {
+        List<Integer> list = new LinkedList<>();
+        list.add(R.drawable.luntik_1);
+        list.add(R.drawable.luntik_2);
+        list.add(R.drawable.luntik_3);
+        list.add(R.drawable.luntik_4);
+        list.add(R.drawable.luntik_5);
         return list;
+    }
+
+    public List<Cartoon> getList() {
+        return mList;
     }
 }

@@ -11,10 +11,11 @@ public class Cartoon {
     private String mTitle;
     private List<Integer> mScrins;
 
-    public Cartoon(Cartoons cartoon, String title, int resoursImg) {
+    public Cartoon(Cartoons cartoon, String title, int resoursImg, List<Integer> resourseList) {
         mCartoons = cartoon;
         mTitle = title;
         mMiniIMG = resoursImg;
+        mScrins = resourseList;
     }
 
     public Cartoons getCartoons() {

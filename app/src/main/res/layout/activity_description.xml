@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DescriptionActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_image_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="33%">
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btn_switch_left"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@id/imageSwitcher"
+            android:layout_alignStart="@id/imageSwitcher"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_arrows_left" />
+
+        <ImageButton
+            android:id="@+id/btn_switch_right"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_alignEnd="@id/imageSwitcher"
+            android:layout_alignRight="@id/imageSwitcher"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_arrows_right" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_image_switcher"
+        android:layout_marginTop="8dp"
+        android:text="sssssssssssss" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
+</android.support.percent.PercentRelativeLayout>

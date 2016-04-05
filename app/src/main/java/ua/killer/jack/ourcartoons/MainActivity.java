@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    public static final String SEL_CARTOON = "selected cartoon ";
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         recyclerView = (RecyclerView) findViewById(R.id.select_cartoon);
-
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new MyRecyclerAdapter(InitAllCartoon.fabric(this)));
+        List<Cartoon> list = InitAllCartoon.newInstance(this).getList();
+        recyclerView.setAdapter(new MyRecyclerAdapter(this, list));
     }
 }
