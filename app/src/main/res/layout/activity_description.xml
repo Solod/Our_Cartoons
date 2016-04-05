@@ -10,6 +10,7 @@
         android:id="@+id/rl_image_switcher"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:elevation="8dp"
         app:layout_heightPercent="33%">
 
         <ImageSwitcher
@@ -49,9 +50,17 @@
         android:layout_marginTop="8dp"
         android:autoLink="web" />
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/link">
+
+        <TextView
+            android:id="@+id/tv_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/link"
+            android:text="@string/description_fixiki" />
+    </ScrollView>
 
 </android.support.percent.PercentRelativeLayout>

@@ -32,7 +32,8 @@ public class InitAllCartoon {
                         context.getResources().getString(R.string.cartoon_luntik),
                         R.drawable.img_mini_luntik,
                         getPicturesLuntik(),
-                        context.getResources().getString(R.string.url_luntik)
+                        context.getResources().getString(R.string.url_luntik),
+                        context.getResources().getString(R.string.description_luntik)
                 )
         );
         mList.add(new Cartoon(
@@ -40,16 +41,16 @@ public class InitAllCartoon {
                         context.getResources().getString(R.string.cartoon_smeshariki),
                         R.drawable.img_mini_smeshariki,
                         getPicturesSmeshariki(),
-                        context.getResources().getString(R.string.url_smeshariki)
-                )
+                        context.getResources().getString(R.string.url_smeshariki),
+                        context.getResources().getString(R.string.description_smeshariki))
         );
         mList.add(new Cartoon(
                         Cartoons.FIXIKI,
                         context.getResources().getString(R.string.cartoon_fixiki),
                         R.drawable.img_mini_fixiki,
                         getPicturesFixiki(),
-                        context.getResources().getString(R.string.url_fixiki)
-                )
+                        context.getResources().getString(R.string.url_fixiki),
+                        context.getResources().getString(R.string.description_fixiki))
         );
     }
 

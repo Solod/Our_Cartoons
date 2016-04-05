@@ -6,18 +6,20 @@ import java.util.List;
  * Created by jack on 04.04.16.
  */
 public class Cartoon {
+    private String mDescriptionText;
     private Cartoons mCartoons;
     private int mMiniIMG;
     private String mTitle;
-    private List<Integer> mScrins;
+    private List<Integer> mScreens;
     private String mLink;
 
-    public Cartoon(Cartoons cartoon, String title, int resoursImg, List<Integer> resourseList, String url) {
+    public Cartoon(Cartoons cartoon, String title, int resoursImg, List<Integer> screensList, String url, String description) {
         mCartoons = cartoon;
         mTitle = title;
         mMiniIMG = resoursImg;
-        mScrins = resourseList;
+        mScreens = screensList;
         mLink = url;
+        mDescriptionText = description;
     }
 
     public Cartoons getCartoons() {
@@ -44,12 +46,12 @@ public class Cartoon {
         this.mTitle = mTitle;
     }
 
-    public List<Integer> getScrins() {
-        return mScrins;
+    public List<Integer> getScreens() {
+        return mScreens;
     }
 
-    public void setScrins(List<Integer> mScrins) {
-        this.mScrins = mScrins;
+    public void setScreens(List<Integer> mScreens) {
+        this.mScreens = mScreens;
     }
 
     public String getLink() {
@@ -58,5 +60,13 @@ public class Cartoon {
 
     public void setLink(String mLink) {
         this.mLink = mLink;
+    }
+
+    public String getmDescriptionText() {
+        return mDescriptionText;
+    }
+
+    public void setDescriptionText(String mDescriptionText) {
+        this.mDescriptionText = mDescriptionText;
     }
 }

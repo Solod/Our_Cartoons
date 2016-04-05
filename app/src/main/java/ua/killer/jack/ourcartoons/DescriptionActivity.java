@@ -19,6 +19,8 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
     private ImageButton mImageButtonRight;
     private ImageButton mImageButtonLeft;
     private TextView mTextViewUrl;
+    private TextView mTextViewDescription;
+
 
     private int mSelectPositionImg = 0;
     private Cartoon mCartoon;
@@ -39,15 +41,18 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
         mImageButtonLeft = (ImageButton) findViewById(R.id.btn_switch_left);
         mImageButtonRight = (ImageButton) findViewById(R.id.btn_switch_right);
         mTextViewUrl = (TextView) findViewById(R.id.link);
+        mTextViewDescription = (TextView) findViewById(R.id.tv_description_text);
 
     }
 
     private void initView() {
         if (mImageSwitcher != null) {
             mImageSwitcher.setFactory(this);
-            mImageSwitcher.setImageResource(mCartoon.getScrins().get(mSelectPositionImg));
+            mImageSwitcher.setImageResource(mCartoon.getScreens().get(mSelectPositionImg));
         }
         mTextViewUrl.setText(mCartoon.getLink());
+        mTextViewDescription.setText(mCartoon.getmDescriptionText());
+
 
     }
 
@@ -87,13 +92,13 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_switch_right:
-                if (mSelectPositionImg < mCartoon.getScrins().size() - 1) {
-                    mImageSwitcher.setImageResource(mCartoon.getScrins().get(++mSelectPositionImg));
+                if (mSelectPositionImg < mCartoon.getScreens().size() - 1) {
+                    mImageSwitcher.setImageResource(mCartoon.getScreens().get(++mSelectPositionImg));
                 }
                 break;
             case R.id.btn_switch_left:
                 if (mSelectPositionImg > 0) {
-                    mImageSwitcher.setImageResource(mCartoon.getScrins().get(--mSelectPositionImg));
+                    mImageSwitcher.setImageResource(mCartoon.getScreens().get(--mSelectPositionImg));
                 }
                 break;
             default:
