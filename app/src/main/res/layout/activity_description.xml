@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DescriptionActivity">
 
+
     <RelativeLayout
         android:id="@+id/rl_image_switcher"
         android:layout_width="match_parent"
@@ -78,4 +79,26 @@
             android:textSize="14sp" />
     </ScrollView>
 
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/next_icon_arrows_right" />
+
+    <ImageButton
+        android:id="@+id/btn_prev"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:scaleX="-1"
+        android:src="@drawable/next_icon_arrows_right" />
 </android.support.percent.PercentRelativeLayout>

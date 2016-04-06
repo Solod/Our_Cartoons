@@ -24,6 +24,8 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
 
     private int mSelectPositionImg = 0;
     private Cartoon mCartoon;
+    private ImageButton mImageButtonNext;
+    private ImageButton mImageButtonPrev;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
         mImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher);
         mImageButtonLeft = (ImageButton) findViewById(R.id.btn_switch_left);
         mImageButtonRight = (ImageButton) findViewById(R.id.btn_switch_right);
+        mImageButtonNext = (ImageButton) findViewById(R.id.btn_next);
+        mImageButtonPrev = (ImageButton) findViewById(R.id.btn_prev);
         mTextViewUrl = (TextView) findViewById(R.id.link);
         mTextViewDescription = (TextView) findViewById(R.id.tv_description_text);
 
@@ -59,6 +63,8 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
     private void initListener() {
         mImageButtonRight.setOnClickListener(this);
         mImageButtonLeft.setOnClickListener(this);
+        mImageButtonNext.setOnClickListener(this);
+        mImageButtonPrev.setOnClickListener(this);
     }
 
     private Cartoon getCartoons(Intent intent) {
@@ -101,6 +107,25 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
                     mImageSwitcher.setImageResource(mCartoon.getScreens().get(--mSelectPositionImg));
                 }
                 break;
+            case R.id.btn_next:
+                if (mCartoon.getCartoons().ordinal() < Cartoons.values().length) {
+                    Intent intent = new Intent(this, DescriptionActivity.class);
+                    Cartoons cartoonsArr[] = Cartoons.values();
+                    Cartoons cartoonsNext = cartoonsArr[mCartoon.getCartoons().ordinal() + 1];
+                    intent.putExtra(MainActivity.SEL_CARTOON, cartoonsNext);
+                    startActivity(intent);
+                }
+                break;
+            case R.id.btn_prev:
+                if (mCartoon.getCartoons().ordinal() > 0) {
+                    Intent intent = new Intent(this, DescriptionActivity.class);
+                    Cartoons cartoonsArr[] = Cartoons.values();
+                    Cartoons cartoonsNext = cartoonsArr[mCartoon.getCartoons().ordinal() - 1];
+                    intent.putExtra(MainActivity.SEL_CARTOON, cartoonsNext);
+                    startActivity(intent);
+                }
+                break;
+
             default:
         }
     }
