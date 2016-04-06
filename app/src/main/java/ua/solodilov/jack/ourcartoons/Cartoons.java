@@ -1,4 +1,4 @@
-package ua.killer.jack.ourcartoons;
+package ua.solodilov.jack.ourcartoons;
 
 /**
  * Created by jack on 04.04.16.

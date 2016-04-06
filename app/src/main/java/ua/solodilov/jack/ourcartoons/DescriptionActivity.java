@@ -1,4 +1,4 @@
-package ua.killer.jack.ourcartoons;
+package ua.solodilov.jack.ourcartoons;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,6 +33,7 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
         setContentView(R.layout.activity_description);
         Intent intent = getIntent();
         mCartoon = getCartoons(intent);
+        setTitle(mCartoon.getTitle());
         findViews();
         initView();
         initListener();

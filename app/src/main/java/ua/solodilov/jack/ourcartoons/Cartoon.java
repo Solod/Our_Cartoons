@@ -1,4 +1,4 @@
-package ua.killer.jack.ourcartoons;
+package ua.solodilov.jack.ourcartoons;
 
 import java.util.List;
 

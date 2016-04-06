@@ -1,4 +1,4 @@
-package ua.killer.jack.ourcartoons;
+package ua.solodilov.jack.ourcartoons;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

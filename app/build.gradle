@@ -3,9 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
     defaultConfig {
-        applicationId "ua.killer.jack.ourcartoons"
+        applicationId 'ua.solodilov.jack.ourcartoons'
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -21,6 +20,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    productFlavors {
+    }
 }
 
 dependencies {
@@ -28,5 +29,4 @@ dependencies {
     compile 'com.android.support:cardview-v7:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:percent:23.+'
-
 }
