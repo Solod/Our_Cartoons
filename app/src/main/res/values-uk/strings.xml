@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Our Cartoons</string>
-    <string name="image_description">image</string>
-    <string name="cartoon_luntik">Luntik</string>
-    <string name="cartoon_smeshariki">Smeshariki</string>
-    <string name="cartoon_fixiki">Fixiki</string>
-    <string name="cartoon_alis">Alisa knows what to do!</string>
-    <string name="cartoon_barbos">Barboskins</string>
+    <string name="image_description"></string>
+    <string name="cartoon_luntik">Лунтик</string>
+    <string name="cartoon_smeshariki">Смешарики</string>
+    <string name="cartoon_fixiki">Фіксики</string>
+    <string name="cartoon_alis">Аліса знає що робити!</string>
+    <string name="cartoon_barbos">Барбоскіни</string>
 
     <string name="url_luntik">http://luntik.ru/</string>
     <string name="url_fixiki">http://www.fixiki.ru/</string>
@@ -13,11 +13,11 @@
     <string name="url_alis">http://www.alisamovie.ru/</string>
     <string name="url_barbos">http://barboskiny.ru/</string>
 
-    <string name="left_description">left</string>
-    <string name="right_description">right</string>
-    <string name="next_description">Next page</string>
-    <string name="prev_description">Preview page</string>
-    <string name="Description">Description</string>
+    <string name="left_description">ліворуч</string>
+    <string name="right_description">праворуч</string>
+    <string name="next_description">Наступна сторінка</string>
+    <string name="prev_description">Попередня сторінка</string>
+    <string name="Description">Опис</string>
 
 <string name="description_luntik">Российский мультсериал Лунтик и его друзья впервые появился на экранах телевизоров не так давно, но его уже полюбили многие дети и взрослые. Главный герой этого многосерийного мультфильма — добрый, отзывчивый и веселый Лунтик — сиреневое существо с Луны. Планета Земля, на которой живут самые различные насекомые и растут красивые растения, сначала его удивила, но, хорошенько раззнакомившись с окружающими, Лунтик нашел верных друзей и приемную семью.
 Главный герой очень любознателен, задает много вопросов и интересуется буквально всем вокруг. Кузнечик Кузя, божья коровка Мила и Пчелёнок — его верные друзья, которые стараются помочь Лунтику освоиться в новом месте и понять, как жить в этом мире. В каждой серии мультипликационного фильма поднимаются важные вопросы: что такое дружба, как помогать старшим, почему не стоит прогуливать уроки в школе, что такое искусство, как относиться к другим, непохожим на тебя живым существам и так далее. Смотреть онлайн Лунтик и его друзья можно детям разного возраста, так как это очень добрый мультфильм с обучающими элементами. В нем просто и понятно разъясняются многие вещи относительно окружающей нас природы, уделяется внимание морали и этике. Противостоят Лунтику и его приятелям два невоспитанных хулигана — наглые и жадные гусеницы, мечтающие стать бабочками. Влияние главного героя на этих не очень положительных персонажей таково, что практически в каждой серии они немножко перевоспитываются. Лунтик и его друзья онлайн смотреть стоит и взрослым, чтобы лучше понять, как объяснить ребенку простым языком различные сложные вещи нашего образа жизни. Сиреневый пушистый добряк стал очень популярным персонажем в современном обществе — его изображения можно встретить на футболках, рюкзаках, тетрадках и пеналах, создаются игры для детей с Лунтиком, а также в продаже есть широкий выбор игрушек, изображающих этого малыша. Создатель мультфильма — Дарина Шмидт, известный российский режиссер, художник и аниматор, лауреат правительственной премии РФ в области культуры (2014г.)</string>

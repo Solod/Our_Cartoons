@@ -9,7 +9,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public static final String SEL_CARTOON = "selected cartoon ";
-    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +18,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        recyclerView = (RecyclerView) findViewById(R.id.select_cartoon);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
         List<Cartoon> list = InitAllCartoon.newInstance(this).getList();
-        recyclerView.setAdapter(new MyRecyclerAdapter(this, list));
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.select_cartoon);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        if (recyclerView != null) {
+            recyclerView.setLayoutManager(layoutManager);
+            recyclerView.setAdapter(new MyRecyclerAdapter(this, list));
+        }
     }
 }

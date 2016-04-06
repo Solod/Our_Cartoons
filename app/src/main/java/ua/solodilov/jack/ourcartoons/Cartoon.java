@@ -26,47 +26,23 @@ public class Cartoon {
         return mCartoons;
     }
 
-    public void setCartoons(Cartoons mCartoons) {
-        this.mCartoons = mCartoons;
-    }
-
     public int getMiniIMG() {
         return mMiniIMG;
-    }
-
-    public void setMiniIMG(int mMiniIMG) {
-        this.mMiniIMG = mMiniIMG;
     }
 
     public String getTitle() {
         return mTitle;
     }
 
-    public void setTitle(String mTitle) {
-        this.mTitle = mTitle;
-    }
-
     public List<Integer> getScreens() {
         return mScreens;
-    }
-
-    public void setScreens(List<Integer> mScreens) {
-        this.mScreens = mScreens;
     }
 
     public String getLink() {
         return mLink;
     }
 
-    public void setLink(String mLink) {
-        this.mLink = mLink;
-    }
-
     public String getmDescriptionText() {
         return mDescriptionText;
-    }
-
-    public void setDescriptionText(String mDescriptionText) {
-        this.mDescriptionText = mDescriptionText;
     }
 }

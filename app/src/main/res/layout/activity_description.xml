@@ -11,7 +11,6 @@
         android:id="@+id/rl_image_switcher"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:elevation="8dp"
         app:layout_heightPercent="33%">
 
         <ImageSwitcher
@@ -27,6 +26,7 @@
             android:layout_alignStart="@id/imageSwitcher"
             android:layout_centerVertical="true"
             android:background="@null"
+            android:contentDescription="@string/left_description"
             android:scaleType="centerInside"
             android:src="@drawable/icon_arrows_left" />
 
@@ -38,6 +38,7 @@
             android:layout_alignRight="@id/imageSwitcher"
             android:layout_centerVertical="true"
             android:background="@null"
+            android:contentDescription="@string/right_description"
             android:scaleType="centerInside"
             android:src="@drawable/icon_arrows_right" />
 
@@ -45,22 +46,19 @@
 
     <TextView
         android:id="@+id/link"
+        style="@style/padding_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_image_switcher"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
         android:autoLink="web" />
 
     <TextView
         android:id="@+id/label_text"
+        style="@style/padding_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/link"
-        android:layout_marginLeft="16dp"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"
-        android:text="Description"
+        android:text="@string/Description"
         android:textSize="14sp" />
 
     <ScrollView
@@ -70,11 +68,9 @@
 
         <TextView
             android:id="@+id/tv_description_text"
+            style="@style/padding_text_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@id/link"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:text="@string/description_fixiki"
             android:textSize="14sp" />
     </ScrollView>
@@ -87,6 +83,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:background="@null"
+        android:contentDescription="@string/next_description"
         android:scaleType="centerInside"
         android:src="@drawable/next_icon_arrows_right" />
 
@@ -98,6 +95,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@null"
+        android:contentDescription="@string/prev_description"
         android:scaleType="centerInside"
         android:scaleX="-1"
         android:src="@drawable/next_icon_arrows_right" />
