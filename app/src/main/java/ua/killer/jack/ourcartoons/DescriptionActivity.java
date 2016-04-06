@@ -108,7 +108,7 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
                 }
                 break;
             case R.id.btn_next:
-                if (mCartoon.getCartoons().ordinal() < Cartoons.values().length) {
+                if (mCartoon.getCartoons().ordinal() < Cartoons.values().length - 1) {
                     Intent intent = new Intent(this, DescriptionActivity.class);
                     Cartoons cartoonsArr[] = Cartoons.values();
                     Cartoons cartoonsNext = cartoonsArr[mCartoon.getCartoons().ordinal() + 1];
@@ -117,13 +117,7 @@ public class DescriptionActivity extends AppCompatActivity implements ViewSwitch
                 }
                 break;
             case R.id.btn_prev:
-                if (mCartoon.getCartoons().ordinal() > 0) {
-                    Intent intent = new Intent(this, DescriptionActivity.class);
-                    Cartoons cartoonsArr[] = Cartoons.values();
-                    Cartoons cartoonsNext = cartoonsArr[mCartoon.getCartoons().ordinal() - 1];
-                    intent.putExtra(MainActivity.SEL_CARTOON, cartoonsNext);
-                    startActivity(intent);
-                }
+                finish();
                 break;
 
             default:

@@ -52,6 +52,22 @@ public class InitAllCartoon {
                         context.getResources().getString(R.string.url_fixiki),
                         context.getResources().getString(R.string.description_fixiki))
         );
+        mList.add(new Cartoon(
+                        Cartoons.ALIS,
+                        context.getResources().getString(R.string.cartoon_alis),
+                        R.drawable.img_mini_alis,
+                        getPicturesAlis(),
+                        context.getResources().getString(R.string.url_alis),
+                        context.getResources().getString(R.string.description_alis))
+        );
+        mList.add(new Cartoon(
+                        Cartoons.BARBOSKINS,
+                        context.getResources().getString(R.string.cartoon_barbos),
+                        R.drawable.img_mini_barbos,
+                        getPicturesBarbos(),
+                        context.getResources().getString(R.string.url_barbos),
+                        context.getResources().getString(R.string.description_barbos))
+        );
     }
 
     private List<Integer> getPicturesLuntik() {
@@ -81,6 +97,26 @@ public class InitAllCartoon {
         list.add(R.drawable.fixiki_3);
         list.add(R.drawable.fixiki_4);
         list.add(R.drawable.fixiki_5);
+        return list;
+    }
+
+    private List<Integer> getPicturesAlis() {
+        List<Integer> list = new LinkedList<>();
+        list.add(R.drawable.alis_1);
+        list.add(R.drawable.alis_2);
+        list.add(R.drawable.alis_3);
+        list.add(R.drawable.alis_4);
+        list.add(R.drawable.alis_5);
+        return list;
+    }
+
+    private List<Integer> getPicturesBarbos() {
+        List<Integer> list = new LinkedList<>();
+        list.add(R.drawable.barbos_1);
+        list.add(R.drawable.barbos_2);
+        list.add(R.drawable.barbos_3);
+        list.add(R.drawable.barbos_4);
+        list.add(R.drawable.barbos_5);
         return list;
     }
 
